@@ -1,6 +1,6 @@
 # Problem
 [11. Search Range in Binary Search Tree](https://www.lintcode.com/problem/search-range-in-binary-search-tree/)
-## Problem decription
+## Problem description
 ```
 Given a binary search tree and a range [k1, k2], return node values within a given range in ascending order.
 Input：{5},6,10
