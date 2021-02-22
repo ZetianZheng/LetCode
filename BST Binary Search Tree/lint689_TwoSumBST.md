@@ -19,7 +19,7 @@ binary search tree:
 1   3
 ```
 ## Tags
-@BST
+@BST @recursion
 
 # Solution
 

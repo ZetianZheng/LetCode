@@ -9,6 +9,8 @@ Output：[]
 it will be serialized {5}
 No number between 6 and 10
 ```
+## Tags
+@BST @recursion
 # Solution
 ## Binary Search Tree feature:  
 
