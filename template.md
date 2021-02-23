@@ -10,6 +10,9 @@
 
 # Solution
 
+<div style="text-align: center;">
+    <img src = '' width = "300" height = "200" alt=""/>
+</div>
 
 # Code
 ```java
