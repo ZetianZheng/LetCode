@@ -30,7 +30,7 @@ Using DFS to search all possible subsets.
 > All leaf nodes are results which are possible subsets.
 
 <div style="text-align: center;">
-    <img src = 'https://raw.githubusercontent.com/ZetianZheng/PicGo_imgs/master/Algorithm/Subset1.png' width = "400" height = "200" alt="subset_1"/>
+    <img src = 'https://raw.githubusercontent.com/ZetianZheng/PicGo_imgs/master/Algorithm/subset_1.png' width = "400" height = "200" alt="subset_1"/>
 </div>
 
 ## method 2
@@ -42,6 +42,20 @@ Using DFS to search all possible subsets.
     <img src = 'https://raw.githubusercontent.com/ZetianZheng/PicGo_imgs/master/Algorithm/subset_2.png' width = "300" height = "200" alt="subset_2"/>
 </div>
 
+***
+## Not Recursion Method:
+## method 3: binary transform
+```
+[1, 2, 3]:
+0 -> 000 -> {}
+1 -> 001 -> {3}
+2 -> 010 -> {2}
+3 -> 011 -> {2,3}
+4 -> 100 -> {1}
+5 -> 101 -> {1,3}
+6 -> 110 -> {1,2}
+7 -> 111 -> {1,2,3}
+```
 # Code
 ## method 1: leaf nodes are results
 ```java
@@ -123,5 +137,35 @@ public class Solution {
        return;
     }
     
+}
+```
+## method 3: binary transform
+``` java
+public class Solution {
+    /**
+     * @param nums: A set of numbers
+     * @return: A list of lists
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> ret = new ArrayList<>();
+        if (nums == null) {
+            return ret;
+        }
+        Arrays.sort(nums);
+        int n = nums.length;
+        for (int i = 0; i < (1<<n); i++) { // how many possible subsets have, and transfer to binary form. ex: length 3: 000 ~ 111
+            List<Integer> subset = new ArrayList<>();
+            // transfer binary form to answer form
+            for (int j = 0; j < n; j++) { // which bit is 1:
+                // if (i & (1<<j) != 0) { error! java didn't take i & (1<<j) as a binary operation
+                if ((i & (1<<j)) != 0) { // can not write like: i & (1<<j) == 1 (10 & 110 = 010)
+                    subset.add(nums[j]);
+                }
+            }
+            ret.add(subset);
+        }
+        
+        return ret;
+    }
 }
 ```
