@@ -28,7 +28,7 @@ class Solution {
         
         int n = nums.length;
         int pivot = n - 2;
-        // System.out.println(nums[pivot] >= nums[pivot]);
+        
         // get pivot where break monotonically decreasing, nums: pivot < pivot + 1
         while (pivot >= 0 && nums[pivot] >= nums[pivot + 1]) { 
             pivot--;
