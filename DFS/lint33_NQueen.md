@@ -35,12 +35,12 @@ x + y = (x + 1) + (y - 1)
 or:  
 x - y = (x - 1) - (y - 1)  
 <div style="text-align: center;">
-    <img src = '.././img/DFS/Nqueen.png' width = "300" height = "300" alt=""/>
+    <img src = '../img/DFS/Nqueen.png' width = "300" height = "300" alt=""/>
 </div>
 
 cols: the column number of queens, from the first row to the nth row.
 <div style="text-align: center;">
-    <img src = '.././img/DFS/Nqueen2.png' width = "300" height = "300" alt=""/>
+    <img src = '../img/DFS/Nqueen2.png' width = "300" height = "300" alt=""/>
 </div>
 
 # Code  
